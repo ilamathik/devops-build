@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 docker login --username =ilamathivinoth --password =dckr_pat_G6kRN127hG362EA-fDWLyDZTrRo
 docker tag app:v1 ilamathivinoth/dev:v1
@@ -14,4 +14,4 @@ echo "pipeline successful"
 fi
 
 
-docker compose up -d
+
