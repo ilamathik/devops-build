@@ -13,5 +13,5 @@ else
 echo "pipeline successful"
 fi
 
-
+docker compose up -d
 
