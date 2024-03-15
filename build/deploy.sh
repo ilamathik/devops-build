@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+docker login --username = ilamathivinoth --password = dckr_pat_thfZomxqdadG564KxFMAVG1WABg
 docker tag app:v1 ilamathivinoth/dev
 docker push ilamathivinoth/dev
 if [[ $GIT_BRANCH == "main" ]]; then
