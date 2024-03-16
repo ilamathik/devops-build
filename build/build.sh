@@ -1,3 +1,3 @@
 #!/bin/bash
 docker build -t app:v1 .
-docker compose up -d
+docker-compose up -d
