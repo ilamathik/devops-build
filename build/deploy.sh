@@ -1,5 +1,5 @@
 #!/bin/bash
-docker login -u “ilamathi.ka@gmail.com” -p “dckr_pat_thfZomxqdadG564KxFMAVG1WABg” docker.io
+docker login -u="${ilamathi.ka@gmail.com}" -p="${aadira@2022}"
 docker tag app:v1 ilamathivinoth/dev
 docker push ilamathivinoth/dev
 if [[ $GIT_BRANCH == "main" ]]; then
