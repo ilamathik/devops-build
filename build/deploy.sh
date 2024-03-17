@@ -1,9 +1,15 @@
 #!/bin/bash
 
-# Tag the image with the Docker Hub repository name and version
-docker tag app:v1 ilamathivinoth/prod
-docker tag app:v1 ilamathivinoth/dev
 
-# Push the image to Docker Hub
-docker push ilamathivinoth/prod
+if [ "$GIT_BRANCH" = "origin/main" ]; then
+docker build -t ilamathivinoth/dev /var/lib/jenkins/workspace/New-project/build
+echo dckr_pat_4ROxiLP-UeHOLlTgQjnC2yfNbNU | docker login -u ilamathivinoth --password-stdin
 docker push ilamathivinoth/dev
+elif [ "$GIT_BRANCH" = "origin/main" ]; then
+echo dckr_pat_4ROxiLP-UeHOLlTgQjnC2yfNbNU | docker login -u ilamathivinoth --password-stdin
+docker pull ilamathivinoth/dev
+docker tag ilamathivinoth/dev ilamathivinoth/prod
+docker push ilamathivinoth/prod
+else
+echo "pipeline Unsuccessful"
+fi
