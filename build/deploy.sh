@@ -2,7 +2,7 @@
 
 
 if [ "$GIT_BRANCH" = "origin/dev" ]; then
-docker build -t ilamathivinoth/dev /var/lib/jenkins/workspace/New-project/build
+docker build -t ilamathivinoth/dev1 /var/lib/jenkins/workspace/New-project/build
 echo dckr_pat_4ROxiLP-UeHOLlTgQjnC2yfNbNU | docker login -u ilamathivinoth --password-stdin
 docker push ilamathivinoth/dev
 elif [ "$GIT_BRANCH" = "origin/main" ]; then
