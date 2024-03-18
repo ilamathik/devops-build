@@ -2,14 +2,14 @@
 
 
 if [ "$GIT_BRANCH" = "origin/dev" ]; then
-docker build -t ilamathivinoth/dev1 /var/lib/jenkins/workspace/New-project/build
+docker build -t ilamathivinoth/dev:webhook /var/lib/jenkins/workspace/New-project/build
 echo dckr_pat_4ROxiLP-UeHOLlTgQjnC2yfNbNU | docker login -u ilamathivinoth --password-stdin
-docker push ilamathivinoth/dev
+docker push ilamathivinoth/dev:webhook
 elif [ "$GIT_BRANCH" = "origin/main" ]; then
 echo dckr_pat_4ROxiLP-UeHOLlTgQjnC2yfNbNU | docker login -u ilamathivinoth --password-stdin
-docker pull ilamathivinoth/dev
-docker tag ilamathivinoth/dev ilamathivinoth/prod
-docker push ilamathivinoth/prod
+docker pull ilamathivinoth/dev:webhook
+docker tag ilamathivinoth/dev:webhook ilamathivinoth/prod:webhook
+docker push ilamathivinoth/prod:webhook
 else
 echo "pipeline Unsuccessful"
 fi
