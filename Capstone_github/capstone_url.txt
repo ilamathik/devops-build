@@ -1,0 +1,6 @@
+github repo url:   https://github.com/ilamathik/devops-build
+
+
+deployed site :    https://3.95.38.193:80
+
+docker images :    ilamathivinoth/dev:latest
